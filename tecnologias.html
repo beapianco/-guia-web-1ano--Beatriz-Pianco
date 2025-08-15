@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tecnologias Web - Guia Profissional</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1>Tecnologias Web</h1>
+      <button id="toggle-theme" aria-label="Alternar tema">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Tecnologias Fundamentais</h2>
+      <p>Conheça as principais tecnologias do desenvolvimento web moderno.</p>
+    </section>
+
+    <section class="tecnologias">
+      <div class="filtros">
+        <button class="filtro-btn ativo" data-filtro="todos">Todos</button>
+        <button class="filtro-btn" data-filtro="frontend">Front-end</button>
+        <button class="filtro-btn" data-filtro="backend">Back-end</button>
+        <button class="filtro-btn" data-filtro="ferramentas">Ferramentas</button>
+      </div>
+
+      <div class="cards-grid">
+        <!-- Front-end -->
+        <article class="tech-card" data-categoria="frontend">
+          <h3>HTML5</h3>
+          <p>Linguagem de marcação para estruturar conteúdo web</p>
+          <button class="btn-info" data-tech="html">Saiba mais</button>
+        </article>
+
+        <article class="tech-card" data-categoria="frontend">
+          <h3>CSS3</h3>
+          <p>Estilização e layout de páginas web</p>
+          <button class="btn-info" data-tech="css">Saiba mais</button>
+        </article>
+
+        <article class="tech-card" data-categoria="frontend">
+          <h3>JavaScript</h3>
+          <p>Linguagem de programação para interatividade</p>
+          <button class="btn-info" data-tech="js">Saiba mais</button>
+        </article>
+
+        <!-- Back-end -->
+        <article class="tech-card" data-categoria="backend">
+          <h3>Node.js</h3>
+          <p>Ambiente de execução JavaScript server-side</p>
+          <button class="btn-info" data-tech="nodejs">Saiba mais</button>
+        </article>
+
+        <article class="tech-card" data-categoria="backend">
+          <h3>Python</h3>
+          <p>Linguagem versátil para back-end</p>
+          <button class="btn-info" data-tech="python">Saiba mais</button>
+        </article>
+
+        <!-- Ferramentas -->
+        <article class="tech-card" data-categoria="ferramentas">
+          <h3>Git</h3>
+          <p>Sistema de controle de versão</p>
+          <button class="btn-info" data-tech="git">Saiba mais</button>
+        </article>
+
+        <article class="tech-card" data-categoria="ferramentas">
+          <h3>VS Code</h3>
+          <p>Editor de código popular</p>
+          <button class="btn-info" data-tech="vscode">Saiba mais</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="fechar">&times;</span>
+        <h2 id="modal-titulo"></h2>
+        <div id="modal-descricao"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Beatriz Pianco - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/tecnologias.js"></script>
+</body>
+</html>

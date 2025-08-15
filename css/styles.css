@@ -1,0 +1,362 @@
+:root {
+  --cor-primaria: #2563EB;
+  --cor-secundaria: #10B981;
+  --texto: #111827;
+  --fundo-claro: #F3F4F6;
+  --bordas: #E5E7EB;
+  --fonte-titulo: 'Poppins', sans-serif;
+  --fonte-texto: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte-texto);
+  background-color: var(--fundo-claro);
+  color: var(--texto);
+}
+
+header {
+  background: var(--cor-primaria);
+  color: white;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+main {
+  padding-top: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, var(--cor-primaria), var(--cor-secundaria));
+  color: white;
+  border-radius: 12px;
+  margin: 1rem;
+}
+
+.btn {
+  background: var(--cor-secundaria);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.explicacao {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--bordas);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+pre {
+  background: var(--fundo-claro);
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+  background: var(--fundo-claro);
+}
+
+/* Tema escuro */
+.dark {
+  --fundo-claro: #1F2937;
+  --texto: #F9FAFB;
+  --bordas: #374151;
+}
+
+.dark .card {
+  background: #374151;
+}
+
+/* Estilos da página de tecnologias */
+.tecnologias {
+  padding: 2rem;
+}
+
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filtro-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--cor-primaria);
+  background: transparent;
+  color: var(--texto);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filtro-btn.ativo,
+.filtro-btn:hover {
+  background: var(--cor-primaria);
+  color: white;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.tech-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+}
+
+.btn-info {
+  background: var(--cor-primaria);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+.btn-info:hover {
+  background: var(--cor-secundaria);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 1001;
+}
+
+.modal-content {
+  background: var(--fundo-claro);
+  color: var(--texto);
+  margin: 5% auto;
+  padding: 2rem;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 12px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.fechar {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--texto);
+}
+
+/* Dark mode específico */
+.dark .tech-card {
+  background: #374151;
+}
+
+.dark .filtro-btn {
+  color: white;
+}
+
+/* Estilos da página de fluxo */
+.timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.etapa {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.etapa::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  background: var(--cor-primaria);
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.dark .etapa {
+  background: #374151;
+}
+
+/* Estilos do Quiz */
+.quiz-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.progresso {
+  margin-bottom: 2rem;
+}
+
+.barra-progresso {
+  width: 100%;
+  height: 10px;
+  background: var(--bordas);
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.progresso-preenchido {
+  height: 100%;
+  background: var(--cor-primaria);
+  border-radius: 5px;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.questao {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dark .questao {
+  background: #374151;
+}
+
+.alternativas {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.alternativa {
+  padding: 1rem;
+  border: 2px solid var(--bordas);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--texto);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.alternativa:hover {
+  border-color: var(--cor-primaria);
+}
+
+.alternativa.selecionada {
+  background: var(--cor-primaria);
+  color: white;
+  border-color: var(--cor-primaria);
+}
+
+#resultado {
+  text-align: center;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dark #resultado {
+  background: #374151;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar h1 {
+    font-size: 1.2rem;
+  }
+  
+  .hero {
+    padding: 2rem 1rem;
+  }
+  
+  .explicacao {
+    grid-template-columns: 1fr;
+  }
+  
+  .filtros {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filtro-btn {
+    width: 100%;
+  }
+  
+  .timeline {
+    padding: 1rem;
+  }
+  
+  .etapa {
+    margin-left: 2rem;
+  }
+  
+  .quiz-container {
+    padding: 1rem;
+  }
+}
